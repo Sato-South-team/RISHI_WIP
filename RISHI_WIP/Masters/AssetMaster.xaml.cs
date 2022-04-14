@@ -27,7 +27,7 @@ namespace RISHI_WIP.Masters
     {
         public AssetMaster()
         {
-            InitializeComponent();
+            InitializeComponent(); //test
         }
         private BUSINESS_LAYER.LogCreation.LogCreation obj_Log = new BUSINESS_LAYER.LogCreation.LogCreation();
         private BUSINESS_LAYER.Masters.Masters obj_Mast = new BUSINESS_LAYER.Masters.Masters();
