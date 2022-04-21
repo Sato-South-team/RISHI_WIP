@@ -21,12 +21,12 @@
                 <my:CrystalReportsViewer ShowLogo="False"  Width="{Binding}" Height="{Binding}"  Name="crystalReportsViewer1" VerticalAlignment="Top" ShowPrevPageButton="True"  ShowToolbar="True" ShowStatusbar="True" ShowRefreshButton="True" ShowGoToPageButton="True" ShowExportButton="True" ShowCopyButton="True" ShowNextPageButton="True" ShowOpenFileButton="True" ShowToggleSidePanelButton="False" />
             </Grid>
         </Border>
-        <!--<Grid Margin="0,0,20,10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+        <Grid Margin="0,0,20,10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Image Name="imgSmily3" ToolTip="Go Back" MouseLeftButtonUp="ImgSmily3_MouseLeftButtonUp" Stretch="Fill" VerticalAlignment="Top"  Height="50" Width="50"  Source="/RISHI_WIP;component/Images/Back.jpg"/>
 
-        </Grid>-->
+        </Grid>
     </Grid>
 </Window>

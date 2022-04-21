@@ -1,4 +1,5 @@
 ﻿using RISHI_WIP.CommonClasses;
+using Sato_Network_Client_DLL;
 using SATOPrinterAPI;
 using System;
 using System.Collections.Generic;
@@ -233,9 +234,14 @@ namespace RISHI_WIP.Masters
                     if (this.CmbAssetType.Text != "Bobbins")
                     {
                         string[] strArray = CommonVariable.Result.Split('|');
-                        Driver driver = new Driver();
+                       // Driver driver = new Driver();
                         string Data = strArray[2].ToString().Replace("{ASSETNAME}", this.txtAssetName.Text).Replace("{Barcode}", ENTITY_LAYER.Masters.Masters.AssetBarcode).Replace("{Len}", ENTITY_LAYER.Masters.Masters.AssetBarcode.Length.ToString());
-                        driver.SendRawData(strArray[1], Data);
+                       // driver.SendRawData(strArray[1], Data);
+                        NetworkClient networkClient = new NetworkClient();
+                        networkClient.connection(strArray[1].ToString(), 9100);
+                        networkClient.Write(Data);
+                        networkClient.Dispose();
+
                     }
                     CommonMethods.MessageBoxShow(CommonVariable.DataSaved, CommonVariable.CustomStriing.Successfull.ToString());
                     this.Clear();
@@ -245,9 +251,14 @@ namespace RISHI_WIP.Masters
                     if (this.CmbAssetType.Text != "Bobbins")
                     {
                         string[] strArray = CommonVariable.Result.Split('|');
-                        Driver driver = new Driver();
+                        //Driver driver = new Driver();
                         string Data = strArray[2].ToString().Replace("{ASSETNAME}", this.txtAssetName.Text).Replace("{Barcode}", ENTITY_LAYER.Masters.Masters.AssetBarcode).Replace("{Len}", ENTITY_LAYER.Masters.Masters.AssetBarcode.Length.ToString());
-                        driver.SendRawData(strArray[1], Data);
+                        //driver.SendRawData(strArray[1], Data);
+                        NetworkClient networkClient = new NetworkClient();
+                        networkClient.connection(strArray[1].ToString(), 9100);
+                        networkClient.Write(Data);
+                        networkClient.Dispose();
+
                     }
                     CommonMethods.MessageBoxShow(CommonVariable.DataUpdated, CommonVariable.CustomStriing.Successfull.ToString());
                     this.Clear();

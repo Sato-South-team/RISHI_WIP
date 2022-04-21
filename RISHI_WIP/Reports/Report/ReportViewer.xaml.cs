@@ -70,7 +70,7 @@ namespace RISHI_WIP.Reports.Report
                 {
 
                     case "DISPATCH":
-                        Reports.CrystallReports.Dispatch objDispatch = new CrystallReports.Dispatch(); ;
+                        Reports.CrystallReports.Dispatch objDispatch = new CrystallReports.Dispatch() ;
                         objDispatch.SetDataSource(dtReport);
                         crystalReportsViewer1.ViewerCore.ReportSource = objDispatch;
                         crystalReportsViewer1.ToggleSidePanel = Constants.SidePanelKind.None;

@@ -156,7 +156,7 @@ namespace RISHI_WIP.StartUp
         {
             try
             {
-                Process.GetCurrentProcess().Kill();
+                Process.GetProcessesByName("RISHI_WIP")[0].Kill();
             }
             catch (Exception ex)
             {
